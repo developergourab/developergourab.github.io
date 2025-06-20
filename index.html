@@ -15,10 +15,26 @@
       align-items: center;
       height: 100vh;
       text-align: center;
+      overflow: hidden;
     }h1 {
   font-size: 2.5rem;
-  color: #ff4c4c;
-  text-shadow: 0 0 10px #ff4c4c, 0 0 20px #ff4c4c, 0 0 30px #ff4c4c;
+  background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowPulse 5s infinite ease-in-out, shine 2s infinite linear;
+  position: relative;
+}
+
+@keyframes rainbowPulse {
+  0%, 100% { background-position: 0% 50%; transform: scale(1); }
+  50% { background-position: 100% 50%; transform: scale(1.05); }
+}
+
+@keyframes shine {
+  0% { text-shadow: 0 0 5px white; }
+  50% { text-shadow: 0 0 20px white; }
+  100% { text-shadow: 0 0 5px white; }
 }
 
 p {
@@ -54,7 +70,7 @@ p {
 </head>
 <body>
   <h1>Website Restricted By Developer<br>Due To Incomplete Payments Of Development.</h1>
-  <p>If you are a site owner, contact the developer and make payment until <strong>1st  July 2025</strong>.<br>
+  <p>If you are a site owner, contact the developer and make payment until <strong>10th October 2024</strong>.<br>
      After this date, all data of the website will be lost.</p>  <div class="buttons">
     <button class="button" onclick="window.location.href='https://www.instagram.com/ayandutta3383?igsh=MTgyYzJkNnBwMHhzMA=='">Contact via Instagram</button>
     <button class="button" onclick="window.location.href='mailto:ayandutta163@gmail.com'">Contact via Email</button>
